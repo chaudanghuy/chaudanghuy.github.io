@@ -1,32 +1,28 @@
-## Blog Post Title From First Header
+## How to fix error row size too large from SQL when changing column
 
-Due to a plugin called `jekyll-titles-from-headings` which is supported by GitHub Pages by default. The above header (in the markdown file) will be automatically used as the pages title.
+Due to MYSQL, it is pretty clear about its maximum row size: 
+```note
+Every table (regardless of storage engine) has a maximum row size of 65,535 bytes. Storage engines may place additional constraints on this limit, reducing the effective maximum row size.
+```
 
-If the file does not start with a header, then the post title will be derived from the filename.
+The error message indicate that the table's definition allows rows that the table's InnoDB row format can't actually store
 
-This is a sample blog post. You can talk about all sorts of fun things here.
+![image](https://user-images.githubusercontent.com/1155091/177480418-6a5cceae-dba6-4d9f-b80e-4fc70f2157c1.png)
 
 ---
 
-### This is a header
+### Solution
 
-#### Some T-SQL Code
+#### Disabled Innodb strict mode 
 
 ```tsql
-SELECT This, [Is], A, Code, Block -- Using SSMS style syntax highlighting
-    , REVERSE('abc')
-FROM dbo.SomeTable s
-    CROSS JOIN dbo.OtherTable o;
+SET GLOBAL innodb_strict_mode = 0;
 ```
 
-#### Some PowerShell Code
+#### Update config MYSQL
 
 ```powershell
-Write-Host "This is a powershell Code block";
+sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
 
-# There are many other languages you can use, but the style has to be loaded first
-
-ForEach ($thing in $things) {
-    Write-Output "It highlights it using the GitHub style"
-}
+innodb_strict_mode = 0
 ```
