@@ -1,4 +1,4 @@
-## Setup Docker with PHP and MYSQL for web development in Windows 10
+## Setup Docker for Web Development in Windows 10
 
 The guideline requires the basic knowledge of Docker so you need research what is Docker first.
 
