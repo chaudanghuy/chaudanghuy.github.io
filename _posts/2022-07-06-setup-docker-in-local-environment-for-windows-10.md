@@ -28,6 +28,7 @@ Software:
 #### Configure Docker for PHP and MySQL environment
 
 **docker-compose.yml**
+
 ```yml
 version: '3.8'
 services:
@@ -61,6 +62,7 @@ services:
 ```
 
 **Dockerfile**
+
 ```yml
 FROM php:8.0-apache
 RUN docker-php-ext-install mysqli pdo_mysql
@@ -74,6 +76,7 @@ RUN apt-get update \
 #### Create sample PHP script to test
 
 **/public_html/index.php**
+
 ```php
 <?php
 // The MySQL service named in the docker-compose.yml.
@@ -96,6 +99,7 @@ if ($conn->connect_error) {
 ```
 
 #### Run Docker Compose
+
 ```command
 docker-compose up --build
 ```
