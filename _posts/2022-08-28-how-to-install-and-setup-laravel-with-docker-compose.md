@@ -1,4 +1,4 @@
-## How To Install and Set Up Laravel with Docker Compose
+## How To Install and Set Up Laravel 9 with Docker Compose
 
 In this guide, I'll use Docker Compose to containerize a Laravel application for development. 
 
