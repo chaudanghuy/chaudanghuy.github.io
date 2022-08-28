@@ -60,7 +60,7 @@ EXPOSE 8000
 ```yml
 version: '3.8'
 services:
-    app
+    app:
         build:
             context: .
             dockerfile: Dockerfile
@@ -69,7 +69,7 @@ services:
         depends_on:
             -   db
 
-    db
+    db:
         image: mysql:5.7.22
         environment:
             MYSQL_DATABASE: laravel
