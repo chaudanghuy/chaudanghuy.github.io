@@ -1,0 +1,42 @@
+# Jekyll Configuration for Learning Resources Site
+
+title: Learning Resources & Schedules
+description: Career development and startup planning resources
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
+theme: minima
+
+# Plugins
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Exclude from processing
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+# Collections
+collections:
+  schedules:
+    output: true
+    permalink: /schedule/:path/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "schedules"
+    values:
+      layout: "default"
