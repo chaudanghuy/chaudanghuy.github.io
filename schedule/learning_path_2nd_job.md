@@ -1,3 +1,9 @@
+---
+title: "Learning Path for 2nd Job"
+layout: default
+description: A comprehensive 2-month learning plan to transition to a new tech stack for a second job opportunity.
+---
+
 # Learning Path for 2nd Job (2 Months)
 
 ## Current Skills Analysis
