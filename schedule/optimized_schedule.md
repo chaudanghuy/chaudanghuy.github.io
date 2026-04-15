@@ -1,3 +1,9 @@
+---
+title: "Optimized Schedule: 2nd Job + Game Startup"
+layout: default
+description: A detailed 2-month schedule balancing learning for a second job while building a crypto game startup.
+---
+
 # Optimized Schedule: 2nd Job + Game Startup
 
 ## Current Time Analysis
